@@ -20,12 +20,8 @@ function App () {
   }
 
   const handleAdd = () => {
-
-    if(todo.trim()!=="") {
-      SetTodos( [...todos, {id:uuidv4(), todo, isCompleted: false }] )
-      SetTodo( "" );
-    }
-    
+    SetTodos( [...todos, {id:uuidv4(), todo, isCompleted: false }] )
+    SetTodo( "" );
   }
 
   const handleChange = ( e ) => {
