@@ -1,9 +1,12 @@
-{
+{ 
+  "homepage": "http://ruturaj1010.github.io/ReactJs-To-do-list-website",
   "name": "reactjs-to-do-list-website",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist", 
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
