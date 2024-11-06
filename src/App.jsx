@@ -10,7 +10,7 @@ function App () {
   useEffect( () => {
     let todoString = localStorage.getItem( "todos" )
     if ( todoString ) {
-      let todos = JSON.parse( localStorage.getItem( "todos" ) );
+      let todos = JSON.parse( todoString );
       SetTodos( todos );
     }
   }, [] )
@@ -19,6 +19,10 @@ function App () {
   const saveToLS = () => {
     localStorage.setItem( "todos", JSON.stringify( todos ) );
   }
+
+  useEffect(()=>{
+    saveToLS();
+  }, [todos]);
 
   const toggleFinished = ( e ) => {
     setShowFinished( !showFinished )
@@ -40,7 +44,6 @@ function App () {
       return item.id !== id;
     } )
     SetTodos( newTodos )
-    console.log( newTodos );
     saveToLS();
   }
 
@@ -109,4 +112,4 @@ function App () {
   )
 }
 
-export default App
+export default App;
