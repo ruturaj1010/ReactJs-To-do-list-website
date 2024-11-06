@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar";
 import React, { useEffect, useState } from "react";
-import { stringify, v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 
 function App () {
   const [todo, SetTodo] = useState( "" );
